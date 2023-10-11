@@ -1,35 +1,53 @@
+body {
+    background-image: url("ocean.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+    color: white;
+}
 .highlighted-text {
-    color: mediumvioletred;
+    color: #e767ba;
     font-weight: bold;
 }
-.zdjecie_z_tekstem {
-    display: flex;
-    align-items: center;
-}
-.zdjecie {
-    max-width: 50%;
-    margin-right: 20px;
+header {
+    text-align: center;
+    font-size: xxx-large;
 }
 nav {
-    background-color: #51b6a0; /* Tło menu */
-    text-align: left;
+    background-color: #1fc0a8;
+    border: 5px solid #000000;
+    font-family: serif;
+    padding: 10px 0;
+    text-align: center;
 }
-nav ul {
-    list-style: none;
+nav li a {
+    color: #fff;
     padding: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+    border: 5px solid #ffffff;
 }
-nav ul li {
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+li {
     display: inline;
     margin-right: 20px;
 }
-nav ul li a {
+
+a {
     text-decoration: none;
-    color: white; /* Kolor tekstu w menu */
+    color: #fff;
     font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 5px;
 }
-nav ul li a:hover {
-    background-color: #555; /* Kolor tła po najechaniu myszką */
+td {
+    padding: 10px;
+    border: 1px solid #1fc0a8;
+    background-color: #fff;
+}
+
+button {
+    text-decoration-color: black;
 }
