@@ -71,13 +71,14 @@ echo "Suma elementow od 0 do 10: ".$suma2."<br/> <br/>";
 
 //typ zmiennej $_GET
 
-
+echo 'Hej '.htmlspecialchars($_GET["nazwa"].'!';
 
 //typ zmiennej $_POST
 
-
+echo 'Hej '.htmlspecialchars($_POST["nazwa"]) . '!';
 
 //typ zmiennej $_SESSION
 
-
-
+session_start();
+$_SESSION["nowa_sesja"]=$val;
+echo $_SESSION["nowa_sesja"];
