@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text; charset=UTF-8"/>
+    <meta http-equiv="Content-Language" content="pl"/>
+    <meta name="Author" content="Kinga Markowska"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Strona głowna</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="with_background">
+<nav>
+    <ul>
+        <li><a href="index.php">strona glowna</a></li>
+        <li><a href="zolw_blotny.html">zolw blotny</a></li>
+        <li><a href="zolw_czerwonolicy.html">zolw czerwonolicy</a></li>
+        <li><a href="zolw_zoltobrzuchy.html">zolw zoltobrzuchy</a></li>
+        <li><a href="zolw_zoltolicy.html">zolw zoltolicy</a></li>
+        <li><a href="info.html">info</a></li>
+        <li><a href="funkcje.html">funkcje</a></li>
+    </ul>
+</nav>
+<header>Hodowla żółwia wodnego</header>
+<p><b>Żółw wodny</b> to popularne zwierzę w domowych hodowlach.
+    Wodny, stanowi wspaniały obiekt obserwacji
+    – może godzinami wygrzewać się najlepiej w promieniach słońca,
+    a międzyczasie wspaniale pływa. Piękne terrarium może być niezwykłą
+    ozdobą każdego domu.</p>
+<p>Jak dbać o żółwia wodnego?
+    Żółw wodny nie jest trudny w hodowli i aby zapewnić mu zdrowe,
+    szczęśliwe życie wystarczą odpowiednie warunki bytowe oraz zdrowa,
+    dostosowana do żółwia dieta. Żółw nie potrzebuje czułości i raczej trudno
+    z nim się komunikować,ale z pewnością obserwacja tego wyjątkowego zwierzęcia
+    dostarczy opiekunom dużo radości i satysfakcji.</p>
+<h1><span class="highlighted-text">Terrarium dla żółwia wodnego</span></h1>
+<p>
+    <u>Akwarium dla żółwia powinno mieć dość duże wymiary.</u>
+    Przyjmuje się, że minimalna długość to pięciokrotne wymiary żółwia,
+    szerokość to trzykrotne wymiary żółwia i jak największa wysokość.
+    Poziom wody w akwarium dla żółwia powinien wynosić minimum dwa razy tyle,
+    co wysokość żółwia. <b>W akwarium powinna się znaleźć wyspa zajmująca powierzchnię około 1/4 akwarium,
+        na której żółw będzie mógł się wygrzewać pod żarówką grzewczą. </b> Ponadto terrarium musi być wyposażone
+    w wydajny filtr oraz świetlówkę UVB, zastępujące naturalne światło.
+    Dno takiego zbiornika powinno być gładkie, bez żwiru i kamieni, dla ułatwienia utrzymania czystości.
+    Wyspę można ozdobić kamieniami, korzeniami i kawałami kory. Można również posadzić rośliny,
+    ale trzeba mieć na uwadze, że żółwie często je niszczą.
+
+    Temperatura części lądowej powinna w dzień wynosić 25- 28°C, a nocą po wyłączeniu lampy, spadać do około 18°C.
+    Temperatura wody w basenie powinna wynosić około 23-25°C - w małych i średnich akwariach nie jest konieczne
+    używanie grzałki, wystarczy lampa nad wyspą. W dużych konieczne może okazać się dogrzewanie za pomocą zwykłej,
+    akwariowej grzałki.
+
+    <i>W miarę możliwości należy zapewniać żółwiowi częste kąpiele słoneczne w naturalnym słońcu.</i>
+    Żółwiowi wodnemu można także urządzić przestrzeń w ogrodzie – ogrodzony i osłonięty wybieg z oczkiem wodnym.</p>
+<table style="background-color: skyblue"  >
+    <tr>
+        <td><img src="img/zolw1.jpg" alt="żółw1" width="250" height="300"></td>
+        <td><img src="img/zolw2.jpg" alt="żółw2" width="250" height="300"></td>
+        <td><img src="img/zolw3.jpg" alt="żółw3" width="250" height="300"></td>
+        <td><img src="img/aqua_turtle.jpg" alt="żółw4" width="250" height="300"></td>
+    </tr>
+    <tr>
+        <td><img src="img/zolw4.jpg" alt="żółw5" width="250" height="300"></td>
+        <td><img src="img/zolw5.jpg" alt="żółw6" width="250" height="250"></td>
+        <td><img src="img/zolw6.jpg" alt="żółw7" width="250" height="300"></td>
+        <td><img src="img/zolw7.jpg" alt="żółw8" width="250" height="300"></td>
+    </tr>
+</table>
+<div>
+    <h2><span class="highlighted-text">Co jedzą żółwie?</span></h2>
+    <p>
+        Podstawę diety powinny stanowić żywe ryby, żaby, pijawki,
+        ślimaki, larwy zwierząt wodnych, skorupiaki oraz wszelkie
+        rośliny wodne. Urozmaiceniem diety mogą być dżdżownice,
+        niewielkie owady, rośliny łąkowe. Żółwie muszą połykać pokarm w wodzie,
+        gdyż z powodu braku mięśnia poruszającego językiem nie mają jak go
+        przesuwać.<img src="img/pet-turtle.png" alt="maly_zolw" style="float:right" width="300" height="200">
+        Jako uzupełnienie diety można żółwią podawać gotowe mieszanki karmy
+        dla żółwia wodnego, ale nie powinno to stanowić jej podstawy.
+        Ponieważ jedną z najgroźniejszych chorób spotykanych u żółwi
+        jest krzywica, wynikająca z niedoboru wapnia w organizmie wskazane
+        jest podawanie żółwiom wapna dla żółwi.
+        Żółwiom nie należy podawać mięsa ssaków, podrobów i ptaków,
+        jak również owoców i warzyw.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus dolor, scelerisque vestibulum est sit amet,
+        vehicula tempor velit. Donec feugiat auctor arcu, nec dapibus mi gravida vel. Phasellus rutrum quis sem quis dapibus.
+        Sed fringilla nisl sapien, vel elementum tortor lobortis sed. Nam vestibulum id orci id rhoncus. Ut arcu leo,
+        fermentum vel ante et, vestibulum elementum velit. Vestibulum nec justo id nibh hendrerit rutrum sed ac enim.
+        Donec non urna dignissim, molestie ex nec, interdum tortor. Orci varius natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Morbi posuere tempus maximus. Ut at purus quis ligula malesuada
+        posuere. Nunc ullamcorper vitae libero eget ornare. Pellentesque venenatis, magna vel ultrices elementum,
+        massa leo semper sapien, ut venenatis ante sem tincidunt ex.</p>
+</div>
+<div>
+    <form>  <h1>Kontakt</h1>
+        <label for="name">Imię/Nazwisko:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message" rows="2" required></textarea><br>
+
+        <input type="submit" value="wyślij">
+        <button><a href="mailto:164407@student.uwm.edu.pl">My email</a></button>
+    </form>
+</div>
+
+<footer>
+    Źródło obrazków: <a href="https://www.google.com/imghp?hl=pl&ogbl">Google Grafika</a>
+    Źródło treści: <a href="https://fera.pl/jak-dbac-o-zolwia-wodnego-gatunki-zywienie-i-terrarium-dla-zolwia.html">fera.pl</a>
+    <p>2023 | Autorka strony: Kinga Markowska nr indeksu: 164407</p>
+</footer>
+<?php
+$nr_indeksu = "164407";
+$nrGrupy = "2";
+$imieNazwisko = "Kinga Markowska";
+
+echo "PHP:<br/>";
+
+echo "Autor: ".$imieNazwisko." ".$nr_indeksu." grupa ".$nrGrupy." <br/><br/>";
+
+?>
+</body>
+</html>
+
+
