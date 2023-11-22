@@ -3,7 +3,9 @@
 
 session_start();
 include ("../cfg.php");
-function FormularzLogowania(): string
+include("showpage.php");
+
+/*function FormularzLogowania(): string
 {
     return '
     <div class="logowanie">
@@ -135,4 +137,4 @@ DodajNowaPodstrone();
 $id_del = 2;
 UsunPodstrone($id_del);
 
-mysqli_close($link);
+mysqli_close($link);*/
