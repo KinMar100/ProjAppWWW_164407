@@ -1,10 +1,18 @@
 <?php
-# version 1.5
+# version 1.6
 
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
-include("php/head.inc.php");
-require('php/navbar.inc.php');
+include("cfg.php");
+
+foreach (glob("css/*.css") as $plikCss) {
+    echo '<link rel="stylesheet" href="' . $plikCss . '">';
+}
+foreach (glob("js/*.js") as $plikJs) {
+    echo '<script src="' . $plikJs . '"></script>';
+}
+include("php/head.php");
+require('php/navbar.php');
 
 
 if($_GET['idp'] == '') {
@@ -36,13 +44,13 @@ else {
     exit;
 }
 
-include($strona);
-
-foreach (glob("css/*.css") as $plikCss) {
-    echo '<link rel="stylesheet" href="' . $plikCss . '">';
+if (file_exists($strona))
+{
+    include($strona);
 }
-foreach (glob("js/*.js") as $plikJs) {
-    echo '<script src="' . $plikJs . '"></script>';
+else
+{
+    echo "The file $strona does not exist";
 }
 
 $nr_indeksu = "164407";
@@ -53,4 +61,4 @@ echo "<br/>PHP:<br/>";
 
 echo "Autor: ".$imieNazwisko." ".$nr_indeksu." grupa ".$nrGrupy." <br/><br/>";
 
-require('php/footer.inc.php');
+require('php/footer.php');
