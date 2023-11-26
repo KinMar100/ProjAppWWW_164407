@@ -1,3 +1,20 @@
+<html lang="pl">
+<body>
+<form action = "labor_164407_2.php" method="get">
+    <b>nazwa:</b> <label>
+        <input type="text" name="nazwa">
+    <input type="submit" value="zatwierdz">
+</form>
+<form action = "labor_164407_2.php" method = "post">
+    <b>wiek:</b> <label>
+        <input type="text" name="wiek">
+    </label>
+    <input type="submit" value="zatwierdz">
+</form>
+</body>
+
+</html>
+
 <?php
 // ZADANIE_1
 $nr_indeksu = '164407';
@@ -36,7 +53,8 @@ else{
 // petla_while
 $iterator = 0;
 $suma1 = 0;
-echo "Wartosci elementow: <br/>";
+echo "Wartosci elementow (petla while): <br/>";
+
 while($iterator <= 10) {
     echo $iterator." element: ";
     if ($iterator == 10) {
@@ -51,6 +69,8 @@ echo "Suma elementow od 0 do 10: ".$suma1."<br/> <br/>";
 
 // petla_for
 $suma2 = 0;
+echo "Wartosci elementow (petla for): <br/>";
+
 for ($iterator = 0; $iterator <= 10; $iterator++)
 {
     echo $iterator." element: ";
@@ -71,14 +91,20 @@ echo "Suma elementow od 0 do 10: ".$suma2."<br/> <br/>";
 
 //typ zmiennej $_GET
 
-echo 'Hej '.htmlspecialchars($_GET["nazwa"].'!';
+echo 'Hej, '.$_GET["nazwa"].'!';
 
 //typ zmiennej $_POST
 
-echo 'Hej '.htmlspecialchars($_POST["nazwa"]) . '!';
+echo 'Twoj wiek: '.$_POST["wiek"];
+
+echo "<br/>";
 
 //typ zmiennej $_SESSION
 
 session_start();
+$val = 0;
 $_SESSION["nowa_sesja"]=$val;
 echo $_SESSION["nowa_sesja"];
+
+
+
