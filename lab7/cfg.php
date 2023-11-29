@@ -4,10 +4,10 @@ $dbuser = "root";
 $dbpass = "";
 $baza = "moja_strona";
 
-$link = mysqli_connect($dbhost,$dbuser,$dbpass);
-if(!$link)
+$link = mysqli_connect($dbhost,$dbuser,$dbpass, $baza);
+if(mysqli_connect_errno())
 {
-    echo die("<b>przerwane połączenie </b>");
+    exit("przerwane połączenie: </b>".mysqli_connect_error());
 }
 if(!mysqli_select_db($link, $baza))
 {
@@ -15,4 +15,4 @@ if(!mysqli_select_db($link, $baza))
 }
 
 $login = "kinga";
-$pass = "kinmar";
+$pass = "kinkin";

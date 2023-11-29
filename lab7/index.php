@@ -3,7 +3,7 @@
 
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
-include("cfg.php");
+include "cfg.php";
 
 foreach (glob("css/*.css") as $plikCss) {
     echo '<link rel="stylesheet" href="' . $plikCss . '">';
@@ -11,9 +11,9 @@ foreach (glob("css/*.css") as $plikCss) {
 foreach (glob("js/*.js") as $plikJs) {
     echo '<script src="' . $plikJs . '"></script>';
 }
+
 include("php/head.php");
 require('php/navbar.php');
-
 
 if($_GET['idp'] == '') {
     $strona = 'html/glowna.html';
