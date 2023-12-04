@@ -1,15 +1,28 @@
 <?php
 
-function PokazKontakt($odb)
+function PokazKontakt(): string
 {
-    echo'';
+    return '
+        <form action="" method="post">
+            <label for="temat">Temat:</label>
+            <input type="text" name="temat" id="temat" required><br>
+
+            <label for="tresc">Treść:</label>
+            <textarea name="tresc" id="tresc" required></textarea><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required><br>
+
+            <input type="submit" value="Wyślij">
+        </form>
+    ';
 }
 
 function WyslijMailKontakt($odb)
 {
     if(empty($_POST['temat']) || empty($_POST['tresc']) || empty($_POST['email']))
     {
-        echo '[Nie wszystkie pola zostaly wypelnione]';
+        echo '</br>[Nie wszystkie pola zostaly wypelnione]';
         echo PokazKontakt();
     }
     else
@@ -31,8 +44,50 @@ function WyslijMailKontakt($odb)
         echo 'wiadomosc zostala wyslana';
     }
 }
-function PrzypomnijHaslo($odb)
+
+function generujNoweHaslo($dlugosc = 12): string
 {
-    echo'';
+    // Zbiór znaków do wykorzystania w haśle
+    $znaki = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_';
+
+    $haslo = '';
+    $iloscZnakow = strlen($znaki);
+
+    for ($i = 0; $i < $dlugosc; $i++) {
+        $losowyIndeks = rand(0, $iloscZnakow - 1);
+        $haslo .= $znaki[$losowyIndeks];
+    }
+
+    return $haslo;
 }
+
+function aktualizujHaslo($email, $noweHaslo)
+{
+    global $haslaUzytkownikow;
+
+    if (is_array($haslaUzytkownikow) && array_key_exists($email, $haslaUzytkownikow))
+    {
+        $haslaUzytkownikow[$email] = $noweHaslo;
+
+        echo "Hasło użytkownika $email zostało zaktualizowane.";
+    }
+    else
+    {
+        echo "Użytkownik $email nie istnieje lub wystąpił problem z bazą danych.";
+    }
+}
+
+function PrzypomnijHaslo($email)
+{
+    $noweHaslo = generujNoweHaslo();
+
+    aktualizujHaslo($email, $noweHaslo);
+
+    WyslijMailKontakt($email);
+}
+
+$email = 'kinga@example.com';
+$password = 'admpass';
+
+PrzypomnijHaslo($email);
 
