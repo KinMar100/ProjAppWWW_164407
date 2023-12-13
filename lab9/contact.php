@@ -77,25 +77,55 @@ function WyslijMailKontakt($odb)
     }
 }
 
+//------------------------------------------------//
+//               PrzypomnijHaslo                  //
+//------------------------------------------------//
+//   funkcja przypominajaca haslo uzytkownika     //
+//------------------------------------------------//
+function PrzypomnijHaslo($email)
+{
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['przypomnij_haslo'])) {
+        // Sprawdzenie, czy podano adres e-mail
+        if (empty($_POST['email'])) {
+            echo '</br>[Podaj adres e-mail]';
+            return;
+        }
+
+        // generowanie nowego hasła
+        $nowe_haslo = generujNoweHaslo();
+
+        // wysłanie maila z nowym hasłem
+        $mail_subject = "Przypomnienie hasła";
+        $mail_body = "Twoje nowe hasło to: " . $nowe_haslo;
+
+        $header = "From: Przypomnienie hasła <".$email.">\n";
+        $header .= "MIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: \n";
+        $header .= "X-Sender: <".$email.">\n";
+        $header .= "X-Mailer: PRapWWW mail 1.2\n";
+        $header .= "X-Priority: 3\n";
+        $header .= "Return-Path: <".$email.">\n";
+
+        mail($_POST['email'], $mail_subject, $mail_body, $header);
+
+        echo '<h2>Nowe hasło zostało wysłane na podany adres e-mail.</h2>';
+    }
+}
+
 //--------------------------------------------------------//
 //               generujNoweHaslo                         //
 //--------------------------------------------------------//
 //  Funkcja zwracajaca zmienna zaweirajaca nowe haslo     //
 //--------------------------------------------------------//
-function generujNoweHaslo($dlugosc = 12): string
+function generujNoweHaslo($dlugosc = 8)
 {
-    // Zbiór znaków do wykorzystania w haśle
-    $znaki = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_';
-
-    $haslo = '';
-    $iloscZnakow = strlen($znaki);
+    $znaki = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    $nowe_haslo = "";
 
     for ($i = 0; $i < $dlugosc; $i++) {
-        $losowyIndeks = rand(0, $iloscZnakow - 1);
-        $haslo .= $znaki[$losowyIndeks];
+        $nowe_haslo .= $znaki[rand(0, strlen($znaki) - 1)];
     }
 
-    return $haslo;
+    return $nowe_haslo;
 }
 
 
@@ -128,5 +158,4 @@ $password = 'admpass';
 
 WyslijMailKontakt($email);
 
-
-
+# PokazPrzypomnienieHasla($email);

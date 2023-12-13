@@ -1,4 +1,5 @@
 <?php
+//plik konfiguracyjny do bazy w projekcie strony internetowej
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
