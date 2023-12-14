@@ -1,0 +1,76 @@
+<body onload="startclock()" id="zmiana">
+<header>Funkcje z js</header>
+
+<form method="post" name="background">
+    <p class="highlighted-text">Wybierz kolor tła:</p>
+    <input type="button" value="zółty" onclick="changeBackground('#FFF000')">
+    <input type="button" value="czarny" onclick="changeBackground('#000000')">
+    <input type="button" value="biały" onclick="changeBackground('#ffffff')">
+    <input type="button" value="zielony" onclick="changeBackground('#00FF00')">
+    <input type="button" value="niebieski" onclick="changeBackground('#0000FF')">
+    <input type="button" value="pomarańczowy" onclick="changeBackground('#FF8000')">
+    <input type="button" value="szary" onclick="changeBackground('c0c0c0')">
+    <input type="button" value="czerwony" onclick="changeBackground('#FF0000')">
+</form>
+
+<div id="clock"></div>
+<div id="data"></div>
+
+<table>
+    <th>
+    <th><div id="animacjaTestowa1" class="test-block">Kliknij, aby powiększyć >></div>
+
+        <script>
+            $("#animacjaTestowa1").on("click", function () {
+                $(this).animate(
+                    {
+                        width: "500px",
+                        opacity: 0.4,
+                        fontSize: "3em",
+                        borderWidth:"10px"
+                    },1500);
+            });
+        </script>
+    </th>
+    <th>
+        <div id="animacjaTestowa2" class="test-block">Najedź kursorem, aby powiększyć >></div>
+
+        <script>
+            $("#animacjaTestowa2").on(
+                {
+                    "mouseover": function () {
+                        $(this).animate(
+                            {
+                                width: 300
+                            }, 800
+                        );
+                    },
+                    "mouseout" : function () {
+                        $(this).animate(
+                            {
+                                width: 200
+                            }, 800
+                        )
+                    }
+                }
+            );
+        </script>
+    </th>
+
+    <th>
+        <div id="animacjaTestowa3" class="test-block"> Kliknij, aby powiększyć bardziej >></div>
+
+        <script>
+            $("#animacjaTestowa3").on("click", function () {
+                if (!$(this).is(":animated")) {
+                    $(this).animate({
+                        width: "+=" + 50,
+                        height: "+=" + 10,
+                        opacity: "-=" + 0.1,
+                        duration: 3000
+                    });
+                }
+            });
+        </script>
+    </th>
+</table>
