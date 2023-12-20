@@ -26,18 +26,18 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
         $categoryManager->EdytujKategorie($categoryId, $name);
     }
 
-    // Display categories
-    echo "<h2>Categories:</h2>";
+    // wyswietl kategorie
+    echo "<h2>Kategorie:</h2>";
     $categoryManager->PokazKategorie();
 
-    // Add Category Form
+    // dodaj kategorie
     echo '<h2>Dodaj Kategorie:</h2>
         <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
-            <label for="category_name">Category Name:</label>
+            <label for="category_name">Nazwa kategorii:</label>
             <input type="text" name="category_name" required>
-            <label for="parent_category">Parent Category:</label>
+            <label for="parent_category">Kategoria rodzica:</label>
             <select name="parent_category">
-                <option value="0">Main Category</option>';
+                <option value="0">Głowna kategoria</option>';
     $categories = $categoryManager->KategoriaGet();
     foreach ($categories as $category) {
         echo '<option value="'.$category['id'].'">'.$category['name'].'</option>';
@@ -46,7 +46,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
             <input type="submit" name="add_category" value="Add Category">
         </form>';
 
-    // Delete Category Form
+    // usun kategorie
     echo '<h2>Usun kategorie:</h2>
         <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
             <label for="delete_category">Wybierz kategorie:</label>
@@ -58,7 +58,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
             <input type="submit" name="delete_category_submit" value="Delete Category">
         </form>';
 
-    // Edit Category Form
+    // edytuj kategorie
     echo '<h2>Edytuj kategorie:</h2>
         <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
             <label for="edit_category">Wybierz kategorie:</label>

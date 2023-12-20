@@ -9,8 +9,18 @@ class ZarzadzajKategoriami
     }
 
     public function DodajKategorie($name, $parentId = 0) {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM categories WHERE name = ?");
+        $stmt->execute([$name]);
+        $existingCount = $stmt->fetchColumn();
+
+        if ($existingCount > 0) {
+            echo "Kategoria {$name} istnieje.";
+            return;
+        }
         $stmt = $this->pdo->prepare("INSERT INTO categories (parent, name) VALUES (?, ?)");
         $stmt->execute([$parentId, $name]);
+
+        echo "Kategoria '{$name}' została dodana.";
     }
 
     public function UsunKategorie($categoryId) {
@@ -28,9 +38,16 @@ class ZarzadzajKategoriami
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function PokazKategorie() {
+    public function PokazKategorie()
+    {
         $categories = $this->KategoriaGet();
-        $tree = $this->DrzewoKategorii($categories, 0);
+        $tree = [];
+
+        foreach ($categories as $category) {
+            if ($category['parent'] == 0) {
+                $this->DrzewoKategorii($categories, $category['id'], $tree, 1);
+            }
+        }
 
         foreach ($tree as $category) {
             echo $category['name'] . "<br>";
@@ -41,22 +58,24 @@ class ZarzadzajKategoriami
         }
     }
 
-    private function DrzewoKategorii($categories, $parentId): array
+    private function DrzewoKategorii($categories, $parentId, &$tree, $depth = 0)
     {
-        $tree = [];
+        if ($depth >= 2) {
+            return;
+        }
 
         foreach ($categories as $category) {
             if ($category['parent'] == $parentId) {
-                $children = $this->DrzewoKategorii($categories, $category['id']);
+                $children = [];
+                $this->DrzewoKategorii($categories, $category['id'], $children, $depth + 1);
                 if (!empty($children)) {
                     $category['children'] = $children;
                 }
                 $tree[] = $category;
             }
         }
-
-        return $tree;
     }
+
 
     private function WyswietlPodkategorie($subcategories, $indent) {
         foreach ($subcategories as $subcategory) {

@@ -11,7 +11,7 @@
     padding: 10px;
 }
 
-.logowanie h3 {
+h2 {
     font-weight: bold;
     padding: 5px;
     background-color: darksalmon;
@@ -19,4 +19,9 @@
 
 form {
     color: darkgreen;
+}
+
+select {
+    font-weight: bold;
+    border: 5px solid #000000;
 }
