@@ -1,0 +1,51 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-heading {
+    background-color: #3fc0ad;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.form-table-header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-table-data {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.form-link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.form-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #3fc0ad;
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-icon {
+    margin-right: 5px;
+}
