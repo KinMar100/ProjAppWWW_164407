@@ -1,0 +1,9 @@
+.contact {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+label.contact  {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}

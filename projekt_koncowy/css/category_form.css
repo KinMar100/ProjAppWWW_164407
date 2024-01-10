@@ -1,0 +1,130 @@
+.cat-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+
+.cat-card-header {
+    background-color: #3fc0ad;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cat-form-group {
+    margin-bottom: 15px;
+}
+
+.cat-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cat-form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.cat-btn {
+    background-color: #3fc0ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cat-btn:hover {
+    background-color: #3fc0ad;
+}
+
+.category-container {
+    background-color: #3fc0ad;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.category-actions {
+    display: flex;
+}
+
+.category-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #100101;
+    background-color: #3fc0ad;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+
+.category-subheader h4 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.subcategory {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subcategory a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #3fc0ad;
+}
+
+
+.out-of-stock {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 2px solid #000000;
+    margin: 10px;
+    display: inline-block;
+}
+
+.button_add_category {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #100101;
+    color: #ffffff;
+    background-color: #3fc0ad;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button_add_category:hover {
+    background-color: #3fc0ad;
+    color: #ffffff;
+    border-color: #ffffff;
+}

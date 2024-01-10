@@ -1,0 +1,102 @@
+.shop-container {
+    margin: 0 auto;
+}
+
+.shop-heading {
+    background-color: #3fc0ad;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.product {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2
+{
+    margin-top: 10px;
+}
+
+.product .price
+{
+    color: #3fc0ad;
+    font-weight: bold;
+}
+
+.product .price_all
+{
+    color: #b9174e;
+    font-weight: bold;
+}
+
+.product .quantity
+{
+    margin-top: 5px;
+}
+
+.product form
+{
+    margin-top: 10px;
+}
+
+.product input[type="number"]
+{
+    width: 50px;
+}
+
+.product button
+{
+    background-color: #3fc0ad;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.product button:hover
+{
+    background-color: #3fc0ad;
+}
+
+.product button i
+{
+    font-family: 'Fira Code Light', serif;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.first-div {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-color: white;
+    border-style: dashed;
+    border-width: medium;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quantity-input {
+    width: 10px;
+    height: 40px;
+    text-align: center;
+}

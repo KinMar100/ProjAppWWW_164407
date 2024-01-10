@@ -1,0 +1,82 @@
+.logowanie {
+    background-color: #1fc0a8;
+    border-radius: 10px ;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logowanie input {
+    background-color: darksalmon;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.logowanie td {
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+}
+
+.logowanie button {
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.logowanie button:hover {
+    background-color: #fff;
+}
+.logowanie td a {
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+.logowanie h1 {
+    color: black;
+}
+
+.logowanie a {
+    color: black;
+    text-decoration: none;
+}
+
+.logowanie a:hover {
+    text-decoration: underline;
+}
+
+/* Add the following styles if necessary */
+.logowanie table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.logowanie th, .logowanie td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.logowanie th {
+    background-color: #f2f2f2;
+}
+
+.logowanie td a {
+    color: #007bff;
+}
+
+.logowanie td a:hover {
+    text-decoration: underline;
+}

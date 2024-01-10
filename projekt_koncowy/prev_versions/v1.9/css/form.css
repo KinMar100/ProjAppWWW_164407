@@ -1,0 +1,27 @@
+.logowanie {
+    background-color: #1fc0a8;
+    border-radius: 10px ;
+    padding: 5px;
+}
+.logowanie input {
+    background-color: darksalmon;
+}
+.logowanie td {
+    font-weight: bold;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    padding: 5px;
+    background-color: darksalmon;
+}
+
+form {
+    color: darkgreen;
+}
+
+select {
+    font-weight: bold;
+    border: 5px solid #000000;
+}
