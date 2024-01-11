@@ -1,6 +1,5 @@
 body.with_background {
     background-image: url("../img/ocean.jpg");
-    background-color: #3fc0ad;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.8;
@@ -58,7 +57,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
 }
 td {

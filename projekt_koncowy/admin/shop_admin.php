@@ -25,19 +25,22 @@ global $link;
                             </a>
                             <ul class="product-actions">
                                 <li><a href="index.php?idp=edit_product&id=<?php echo $row['id']; ?>"
-                                       data-tip="Edit Product"><i class="">Edytuj produkt</i></a></li>
+                                       data-tip="Edit Product" style="color: white">Edytuj produkt</a></li>
                                 <li><a onclick="return confirm('Jesteś pewien, że chcesz usunąć ten produkt')"
-                                       href="index.php?idp=delete_product&id=<?php echo $row['id']; ?>" data-tip="Delete"><i
-                                                class="">Usuń produkt</i></a></li>
+                                       href="index.php?idp=delete_product&id=<?php echo $row['id']; ?>" data-tip="Delete" style="color: white">Usuń produkt</a></li>
                             </ul>
                         </form>
                     </div>
                     <div class="product-details">
-                        <h3 class="product-title"><a href="#"><?php echo $row['title']; ?></a></h3>
+                        <h3 class="product-title"><?php echo $row['title']; ?></h3>
                         <div class="price">Cena: <?php echo $row['price_netto']; ?>zł + <?php echo $row['tax_vat']; ?>zł VAT</div>
                         <div class="quantity">Dostępnych sztuk: <?php echo $row['quantity']; ?></div>
                         <div class="quantity">Kategoria: <?php echo $row['category']; ?></div>
                         <div class="quantity">Wymiary: <?php echo $row['dimensions']; ?></div>
+                        <div class="quantity">Data dodania: <?php echo $row['date_add']; ?></div>
+                        <div class="quantity">Data edycji: <?php echo $row['date_edit']; ?></div>
+                        <div class="quantity">Data wygaśniecia: <?php echo $row['date_expire']; ?></div>
+                        <div class="quantity">Opis: <?php echo $row['description']; ?></div>
                         <form method="post">
                             <input class="hidden-input" type="hidden" name="item-name" value="<?php echo $row['title']; ?>"/>
                             <input class="hidden-input" type="hidden" name="id" value="<?php echo $row['id']; ?>"/>

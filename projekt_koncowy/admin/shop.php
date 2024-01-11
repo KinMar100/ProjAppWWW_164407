@@ -35,11 +35,12 @@ if (isset($_POST['add_to_cart'])) {
                             <a href="#">
                                 <img class="pic-1" src="<?php echo $row['image']; ?>" alt="Product_Image">
                             </a>
-                            <h2 class="product-title"><a href="#"><?php echo $row['title']; ?></a></h2>
+                            <h2 style="color: white"><?php echo $row['title']; ?></h2>
                             <div class="price">Cena: <?php echo $row['price_netto']; ?>zł + <?php echo $row['tax_vat']; ?>zł VAT</div>
                             <div class="quantity">Dostępnych sztuk: <?php echo $row['quantity']; ?></div>
                             <div class="quantity">Kategoria: <?php echo $row['category']; ?></div>
                             <div class="quantity">Wymiary: <?php echo $row['dimensions']; ?></div>
+                            <div class="quantity">Opis: <?php echo $row['description']; ?></div>
                             <input class="hidden-input" type="hidden" name="name" value="<?php echo $row['title']; ?>"/>
                             <input class="hidden-input" type="hidden" name="price" value="<?php echo $row['price_netto'] + $row['tax_vat'] ?>"/>
                             <label>
